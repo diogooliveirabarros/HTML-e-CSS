@@ -1,0 +1,229 @@
+@charset "utf-8"; /*Indica o padrão português utf-8*/
+@font-face { /*Adiciona uma nova fonte externa*/
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dddddd;
+    color: rgba(0,0,0,1);
+}
+
+div#interface {
+    width: 1220px;
+    background-color: #ffffff;
+    margin: -20px auto 10px auto; /*Define a margem de fora da interface(cima, direita, baixo e esquerda)*/
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5); /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    padding: 10px 10px 10px 10px; /* Define a margem de dentro da interface(cima, direita, baixo e esquerda)*/
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /*Sublinhado*/
+}
+
+                        /* Formatação de imagens com legendas */
+
+figure.foto-legenda {
+    position: relative; /* Posição relativa indica que se movimenta apenas dentro dele*/
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black /*Sombreamento para a imagem*/
+}
+
+figure.foto-legenda img { /*Toda imagem do tipo img dentro da FOTO-LEGENDA, será ampliada ao seu tamanho total*/
+    width: 100%;
+    /*height: 100%;*/
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0; /*Opacidade Ativada*/
+    position: absolute; /*Para que ele passe por cima dos outros componentes,fica livre por todo o site*/
+    top: 0px;
+    background-color: rgba(0,0,0,0.5); /*Cor do fundo do texto da imagem*/
+    color: white; /*Cor da letra do texto da imagem*/
+    width: 100%; /*Largura total para o fundo preto do texto da imagem*/
+    height: 100%; /*Altura toal para o fundo preto do texto da imagem*/
+    padding: 10px; /*Ficará maior do que a imagem o fundo do texto */
+    box-sizing: border-box; /*Ajustará o fundo do texto com a imagem que está com sua borda*/
+    transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption { /*Comando para desativar a opacidade quando o mouse passar pela imagem*/
+    opacity: 1;
+}
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 1110px; /*Distância do lado esquerdo para o direito*/
+    top: 70px; /*Distância do topo do site*/
+}
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid; /*Cria uma linha (largura da linha, cor, e tipo)*/
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px; /*Adicionando uma foto no padrão de CSS(Não repetir, deslocamento lateral, e vertical)*/
+}
+
+header#cabecalho h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2 {
+    font-family: Arial,sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+                          /* Formatação do Menu */
+
+nav#menu { /*Transforma o menu em um bloco, para que seja flutuante na página*/
+    display: block;
+}
+
+nav#menu ul {
+    list-style: none; /*Indica a retirada das marcações(Bolinhas)*/
+    text-transform: uppercase; /*Transforma todas as letras em maiúsculas*/
+    position: absolute; /*Para que ele passe por cima dos outros componentes,fica livre por todo o site*/
+    top: -20px; /*Distância do topo do site*/
+    left: 550px; /*Distância do lado esquerdo para o direito*/
+}
+
+nav#menu li {
+    display: inline-block; /*Exibe o texto do menu em uma única linha horizontal*/
+    background-color: #dddddd; /*Fundo Cinza*/
+    padding: 10px; /*Controla o espaço dentro do fundo*/
+    margin: 2px; /*Controla o espaço fora do fundo*/
+}
+
+nav#menu h1 {
+    display: none; /*Retira a exibição da palavra Menu Principal do site*/
+}
+
+section#corpo {
+    display: block; /*Transforma em um bloco*/
+    width: 700px;
+    float: left; /*Faz ele flutuar à esquerda*/
+    border-right: 1px solid #606060;
+    padding-right: 23px;
+}
+
+article#noticia-principal h2 {
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px; /*Espaço interno (encima, direita, embaixo e esquerda)*/
+    margin: 10px 0px 10px 0px; /*Espaço externo (encima, direita, embaixo e esquerda)*/
+}
+
+header#cabecalho-artigo h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.direita {
+    text-align: right;
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+header#cabecalho-artigo h3 {
+    font-size: 12pt;
+    color: #606060;
+}
+
+aside#lateral {
+    display: block; /*Transforma em um bloco*/
+    width: 450px;
+    float: right; /*Faz ele flutuar à direita*/
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+aside#lateral h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+}
+
+footer#rodape {
+    clear: both; /*Limpa a configuração dele ter que flutuar(Ele fica fora do bloco e se move até embaixo)*/
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}
+
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px; /*Tira os espaços entre as linhas interior da tabela*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td {
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table#tabelaspec td.ce {
+    color: #ffffff; /*Cor da letra*/
+    background-color: #606060; /*Cor de fundo*/
+    vertical-align: top;
+    font-weight: bold; /*Colocar em negrito*/
+}
+
+table#tabelaspec td.cd {
+    background-color: #cecece;
+}
+
+table#tabelaspec caption { /*Configuração do título da tabela*/
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span {
+    display: block; /*Se torna um bloco, é desconectado ao texto*/
+    float: right; /*Flutuação à direita*/
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
