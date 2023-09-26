@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+form#contato legend {
+    font-weight: bold;
+}
+
+form#contato fieldset#usuario {
+    border: 1px solid rgba(0,0,0,0.2);
+}

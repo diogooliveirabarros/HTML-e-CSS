@@ -1,0 +1,1031 @@
+<!Manual feito por: Paulo Cézar - www.artsampa.com  -  www.supernuke.com.br em 23/03/2004 São Paulo - Brazil">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Manual de instala&ccedil;&atilde;o da Loja virtual osConnerce 2.2 br</TITLE>
+<META HTTP-EQUIV="imagetoolbar" CONTENT="no">
+
+<STYLE type=text/css>
+<!--
+A:link {text-decoration:none; color:Red; font-size: 8pt}
+A:visited {text-decoration:none; color:red; font-size: 8pt}
+A:hover {text-decoration:none; color:blue; background-color:yellow; font-size: 8pt}
+b { font-family:"Helvetica", "Arial", "sans-serif"; color:#0000FF; font-size: 8pt}
+p {  font-family:"Helvetica", "Arial", "sans-serif"; color:#000000; font-size: 8pt}
+td { font-family:"Helvetica", "Arial", "sans-serif"; color:#000000; font-size: 8pt}
+BODY { font-family:"Helvetica", "Arial", "sans-serif"; color:#000000; font-size: 8pt scrollbar-face-color: #CCCCCC; scrollbar-highlight-color: #CCCCCC; scrollbar-3dlight-color: #000000; scrollbar-darkshadow-color: #CCCCCC; scrollbar-shadow-color: #000000; scrollbar-arrow-color: #000000; scrollbar-track-color: #CCCCCC;}
+-->
+</STYLE>
+
+</head><body bgcolor="#CCCCCC" oncontextmenu="return false;">
+
+<DIV align=center>
+<CENTER>
+<TABLE bgColor=#FFFFFF cellSpacing=0 cellPadding=0 width=90% border=0>
+  <TBODY>
+  <TR><TD>
+
+<TABLE align=center bgColor=#FFFFFF cellSpacing=0 cellPadding=0 width=98% border=0>
+  <TBODY>
+  <TR><TD><br>
+
+<center>
+<IMG src="../../../../../../Documents%20and%20Settings/ALESSANDRO/Meus%20documentos/Minhas%20Webs/oscommerce.gif" border=0 width="468" height="50"><br><br>
+
+<b>MANUAL DE INSTALA&Ccedil;&Atilde;O DA LOJA VIRTUAL OSCOMMERCE 2.2 BR</b></center><P>
+ 
+<b>Nota</B> <p>
+
+Este sistema tem o c&oacute;digo fonte aberto, e 
+pode ser adaptado por desenvolvedores com as necessidades 
+individuais de cada usu&aacute;rio. Espero que lhe seja util como é para mim.   
+
+<P>
+
+<B>Requerimentos b&aacute;sicos</b>
+
+<P>
+
+Para que possa configurar a loja virtual 2.2 br, os sequintes pr&eacute; requesitos s&atilde;o necess&aacute;rios.<br><br>
+
+- Um Computador com um sitema instalado e funcionando convenientemente para as configura&ccedil;&otilde;es da loja virtual<br><br>
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Um Web Server com:</b><br><br>
+- Servidor Apache (http://www.apache.org)<br>
+- PHP vers&atilde;o 4.1.x ou melhor (mod_php), m&oacute;dulo do Apache (http://www.php.net)<br>
+- database MySQL (http://www.mysql.com)<br>
+- E com no m&iacute;nimo 20 mgs de espa&ccedil;o e com endere&ccedil;o de url<br><br>
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>OBS:</b> Pode se utilizar pacotes instalaveis que emulam servers para testes locamente como: <b><font color="#000000">Easyphp, Phpdev, AppServ</font></b> entre outros.<br>
+Mais sua utiliza&ccedil;&atilde;o n&atilde;o promete 100% de compatibilidade.
+
+<P>
+
+<B>Configura&ccedil;&otilde;es e instala&ccedil;&atilde;o</b>
+
+<P>
+
+- Crie o banco de dados em seu server sql/phpmyadmin onde vai ficar o banco de dados da loja virtual<br><br>
+- Configure os arquivos configure.php que est&atilde;o dentro das pastas:<br><br> 
+
+- <b><font color="#000000">comercio/includes/configure.php <br>
+</font></b>- <b><font color="#000000">comercio/admin/includes/configure.php <br>
+</font></b><br> 
+
+de acordo com seu servidor (site). Abaixo a variaveis de configura&ccedil;&atilde;o.<br><br>
+
+// Define seu webserver com sua URL<br>
+define('HTTP_SERVER', 'http://www.seusite.com');        // seu site URL<br>
+define('HTTPS_SERVER', 'https://www.seusite.com.br');   // seu site URL<br><br>
+
+// define sua database mysql conec&ccedil;&atilde;o<br>
+define('DB_SERVER', 'localhost');           // local da sua database server<br>
+define('DB_SERVER_USERNAME', 'database_name');  // nome usado na database<br>
+define('DB_SERVER_PASSWORD', '12345');  // password usado na database<br>
+define('DB_DATABASE', 'database_name');          // nome da database<br><br>
+
+define('DIR_FS_DOCUMENT_ROOT', '/home/seusite/public_html'); // caminho do server, OBS: somente no admin/includes<br><br>
+
+- Ap&oacute;s ter feito as configura&ccedil;&otilde;es, envie a pasta com&eacute;rcio com todo o conte&uacute;do para seu web site mantendo a estrutura.<br><br>
+- Importe para o seu j&aacute; criado banco de dados sql via cpanel/sql/phpmyadmin do seu server, o bd oscommerce.sql que esta dentro da pasta SQL. Ele &eacute;
+a base de dados da loja virtual.<br><br>
+- Feito isto tente acessar a sua loja virtual indo em: <b><font color="#000000">www.seusite.com.br/comercio</font></b>, se abrir a p&aacute;gina inicial &eacute; porque tudo foi corretamente instalado.<br><br>
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Erro</b>. Se der este erro: = <b><font color="#000000">Unable to connect to database server!</font></b> =, deve ser porque n&atilde;o foi configurado corretamente os configure.php, revise estes passos.
+
+<P>
+
+<B>Permiss&otilde;es (CHMOD) em arquivos e pastas</b>
+
+<P>
+
+
+- D&ecirc; as seguintes permiss&otilde;es (Chmod) nas pastas e arquivos, conectado em seu server.<br>
+- Para fazer isto basta  se conectar com o ftp (Cuteftp, Smartftp ou outro) e clicar com o bot&atilde;o do mouse no arquivo e escolher chmod.<P> 
+                  <center>
+                  <IMG src="images/cutftp.gif" border=0 width="402" height="300"></center><br>
+
+- comercio/admin/backups                  ... 777  // para os backups do bd<br>
+- comercio/images                         ... 777 //  para poder guardar imagens<br>
+- comercio/stylesheet                     ... 777 //  para modificar cores da loja, caso n&atilde;o for modificar deixe em 755<br><br>
+ 
+- o resto das pastas e arquivos n&atilde;o precisa de permiss&otilde;es diferentes.
+
+
+<P>
+
+<B>Protegendo o admin da loja virtual com senha</b>
+
+<P>
+
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>OBS:</b> Nem todos cpanel s&atilde;o iguais, tem algumas diferen&ccedil;as nos icones e textos.<br>
+- Para a seguran&ccedil;a da sua Loja Virtual, recomendamos que 
+voc&ecirc; proteja o seu Administrador com um Login e Senha, cujo 
+processo de inser&ccedil;&atilde;o ser&aacute; mostrado aqui:
+Entre no CPANEL (Painel de Controle) do seu dom&iacute;nio: 
+http://www.seudominio.com.br/cpanel, utilize o login e senha 
+que foi lhe fornecido em um e-mail de retorno ap&oacute;s a abertura 
+de sua conta.<p> 
+                  
+<center><IMG src="images/_26.gif" border=0 width="402" height="253"></center><br>
+ 
+- Ap&oacute;s ter se logado, voc&ecirc; entrar&aacute; na primeira p&aacute;gina do 
+CPANEL, nessa p&aacute;gina procure pelo item "Proteger Diret&oacute;rios".<p> 
+
+<center><IMG src="images/_27.gif" border=0 width="123" height="84"></center><br>
+ 
+- Agora voc&ecirc; s&oacute; precisa localizar a pasta "admin". Para 
+isso clique na pasta "com&eacute;rcio" e aguarde a tela se abrir, pronto. 
+A pasta "admin" estar&aacute; dentro da pasta "com&eacute;rcio"<p>
+ 
+<center><IMG src="images/_28.gif" border=0 width="175" height="25"></center><br> 
+
+- Quando voc&ecirc; localizar a pasta "admin", clique no no 
+nome "admin" e n&atilde;o na pasta. Isso far&aacute; com 
+que voc&ecirc; acesse as propriedades dessa pasta e possibilitar&aacute; voc&ecirc; de colocar a senha no mesmo.<p>
+ 
+<center><IMG src="images/_29.gif" border=0 width="83" height="79"></center><br>
+
+- Se abrir&aacute; uma nova p&aacute;gina, nela voc&ecirc; ter&aacute; que inserir 
+primeiro o "Nome do recurso" e clique em "Gravar".<p> 
+                  
+<center><IMG src="images/_30.gif" border=0 width="400" height="85"></center><br>
+ 
+- Feito isso voc&ecirc; s&oacute; precisar&aacute; inserir o seu login e 
+senha para acesso a pasta "admin", ou seja ao Administrador da Loja Virtual e clicar no bot&atilde;o "Adicionar novo usu&aacute;rio"<p>
+ 
+<P>
+
+<center><B>Configurando no admin da loja virtual</b></center>
+
+<P>
+
+<center>
+<IMG src="../../../../../../Documents%20and%20Settings/ALESSANDRO/Meus%20documentos/Minhas%20Webs/admloja.gif" border=0 width="461" height="300"></center><br>
+
+- Abaixo algumas das configura&ccedil;&otilde;es que podem ser efetuadasno pain&eacute;l do administrador da loja virtual.<p>
+
+<B>Sua Loja</b><P>
+
+<center>
+<IMG src="../../../../../../Documents%20and%20Settings/ALESSANDRO/Meus%20documentos/Minhas%20Webs/admloja1.gif" border=0 width="392" height="250"></center><p>
+ 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Nome da loja:</b> voc&ecirc; deve digitar o nome de sua loja<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Nome do Propriet&aacute;rio:</B> voc&ecirc; deve digitar o nome do propriet&aacute;rio da loja (pode ser sua empresa ou voc&ecirc; mesmo)<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>E-mail:</B> voc&ecirc; deve colocar o e-mail de sua loja<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>E-mail from:</B> coloque aqui o e-mail que os clientes de sua loja visualizar&atilde;o 
+quando receberem a confirma&ccedil;&atilde;o de um pedido ou qualquer outro retorno de sua loja ao cliente<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Usar mime html quando enviar e-mails: </B> deixe (false)<br>
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Estado:</B> coloque o estado onde voc&ecirc; est&aacute; estabelecido<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Pa&iacute;s:</B> O pa&iacute;s onde esta a loja virtual (Brasil)<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Avisar pedidos por e-mail:</B> Aqui voc&ecirc; pode digitar os e-mails que gostaria que fossem enviados novos pedidos de compra. <br>
+Ex.: mail1 &lt;seuemail1@seudominio.com.br&gt;, mail2 &lt;seuemail2@seudominio.com.br&gt;<p>
+
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>OBS:</b> Para mudar o endereço que vai junto com o e-mail (pedido de compra) para o cliente, 
+vai em <b><font color="#000000">comercio/include/functions/general.php</font></b> =  na linha 918, voc&ecirc; encontrar&aacute; isto: <b><font color="#000000"> $email_text</font></b> com uma url, troque o www.artsampa.com
+por uma de seu interesse, e tambem pode se trocar o texto antes da url.<P>
+
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Enviar e-mails: </B> deixe (true)<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Mostrar cesta de compras ap&oacute;s inserir produtos:</B> caso queira que seu cliente 
+visualize sempre a cesta de compras ap&oacute;s a inser&ccedil;&atilde;o de produtos deixe (true), caso n&atilde;o deseje deixe (false)<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Permitir que o visitante envie p&aacute;gina p/ amigo:</B> se voc&ecirc; deseja que seu 
+cliente envie uma promo&ccedil;&atilde;o ou qualquer outro produto para um amigo a quem ele ache que tenha interesse, deixe (true), ou se 
+n&atilde;o deseja deixe (false)<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Verificar e-mails atrav&eacute;s do DNS: </B>deixe (false)<br>
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>T&iacute;tulo do Site:</B> Aqui voc&ecirc; definir&aacute; o texto a ser inserido na barra superior do seu navegador.<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Texto Inicial do Site:</B> Define o texto a ser exibido no corpo da primeira p&aacute;gina da Loja Virtual, inicie com um &lt;P&gt; para ir para uma segunda linha como mostrado abaixo.<p> 
+
+<center><IMG src="images/_3.gif" border=0 width="400" height="229"></center><br>
+
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Banner da loja:</B> O banner padr&atilde;o &eacute; lojapadrao.gif. Para trocar crie um novo banner com o mesmo nome e envie para: comercio/images/, mas lembre-se, o nome do banner deve ser 
+identico ao que vai ser trocado.<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Texto do banner: </B> Define a descri&ccedil;&atilde;o do seu banner quando o usu&aacute;rio ficar mais de 3 segundos com o mouse sobre o banner aparece o texto.<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Permitir coment&aacute;rios:</B> Permite, ou n&atilde;o, que o usu&aacute;rio fa&ccedil;a um coment&aacute;rio sobre um produto espec&iacute;fico.<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Exibir campo idiomas: </B>Tem O Ingl&ecirc;s e Portugu&ecirc;s e o padr&atilde;o est&aacute; como portugu&ecirc;s.<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Exibir campo moedas:</B> (false / true), falso / verdadeiro<br> 
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>Texto Rodap&eacute;:</B> Define o texto a ser exibido no Rodap&eacute; da sua Loja<P> 
+                   
+<B>Valores M&iacute;nimos</B><P> 
+
+<center>
+<IMG src="../../../../../../Documents%20and%20Settings/ALESSANDRO/Meus%20documentos/Minhas%20Webs/admloja2.gif" border=0 width="467" height="250"></center><br>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Primeiro nome:</B> 
+                  N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para esse campo no 
+                  cadastro do cliente<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Sobrenome:</B> 
+                  N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para esse campo no 
+                  cadastro do cliente <br>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Data de 
+                  nascimento:</B> N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para 
+                  esse campo no cadastro do cliente<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>E-mail:</B>  
+                  N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para esse campo no cadastro do 
+                  cliente<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Endere&ccedil;o: 
+                  </B> N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para esse campo no 
+                  cadastro do cliente<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Empresa:</B>  
+                  N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para esse campo no cadastro do 
+                  cliente<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>CEP: </B> 
+                  N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para esse campo no cadastro do 
+                  cliente<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Cidade:</B> 
+                  N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para esse campo no cadastro do 
+                  cliente<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Pa&iacute;s:</B> 
+                  N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para esse campo no cadastro do 
+                  cliente<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Telefone: 
+                  </B>N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para esse campo no 
+                  cadastro do cliente<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Senha:</B>  
+                  N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para esse campo no cadastro do 
+                  cliente<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Nome do titular do 
+                  cart&atilde;o:</B> N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para esse 
+                  campo no cadastro do cliente<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>N&uacute;mero do cart&atilde;o de 
+                  cr&eacute;dito: </B> N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para esse campo 
+                  no cadastro do cliente<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Coment&aacute;rios: 
+                  </B> N&uacute;mero m&iacute;nimo de caracteres aceit&aacute;veis para esse campo 
+                  quando um cliente deseja fazer um coment&aacute;rio<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Mais vendidos: 
+                  </B>N&uacute;mero m&iacute;nimo de produtos que devem aparecer como os mais 
+                  vendidos<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Tamb&eacute;m compraram: 
+                  </B> N&uacute;mero m&iacute;nimo de produtos que devem aparecer por terem 
+                  sido comprados juntamente com o produto visualizado<p> 
+                   
+
+<B>Valores M&aacute;ximos</B><P>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Livro de 
+                  endere&ccedil;os:</B> Voc&ecirc; deve colocar aqui o n&uacute;mero m&aacute;ximo de 
+                  endere&ccedil;os que deseja constar dentro da loja, &eacute; uma esp&eacute;cie de 
+                  “guest book”<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Resultado de busca: 
+                  </B> Aqui coloque o n&uacute;mero m&aacute;ximo de resultados que voc&ecirc; deseja 
+                  que seu cliente visualize quando efetuar uma pesquisa dentro 
+                  da p&aacute;gina<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Page links: 
+                  </B> N&uacute;mero m&aacute;ximo de page links que voc&ecirc; deseja em sua 
+                  loja<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Ofertas:</B> N&uacute;mero 
+                  m&aacute;ximo de ofertas que deseja constar em sua loja<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Novidades: 
+                  </B> N&uacute;mero m&aacute;ximo de novidades que deseja constar em sua 
+                  loja<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Lan&ccedil;amentos: 
+                  </B> N&uacute;mero m&aacute;ximo de lan&ccedil;amentos que deseja constar em sua 
+                  loja<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Lista de 
+                  fabricantes: </B> A partir do n&uacute;mero que voc&ecirc; colocar aqui, sua 
+                  loja ir&aacute; utilizar a caixa de sele&ccedil;&atilde;o para os fabricantes, o 
+                  ideal &eacute; que voc&ecirc; deixe (0)<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Tamanho da caixa de 
+                  sele&ccedil;&atilde;o dos fabricantes:</B> Preferencialmente deixe (1) para 
+                  que a caixa de sele&ccedil;&atilde;o utilize a “drop-down list”<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Tamanho m&aacute;ximo do 
+                  nome do fabricante:</B> Coloque aqui o n&uacute;mero m&aacute;ximo de 
+                  caracteres que os nomes dos fabricantes devem ter<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Coment&aacute;rios:</B> 
+                  N&uacute;mero m&aacute;ximo de coment&aacute;rios que devem ser exibidos em sua 
+                  loja<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Sele&ccedil;&atilde;o randônica 
+                  de coment&aacute;rios:</B> N&uacute;mero m&aacute;ximo de coment&aacute;rios que sua loja 
+                  deve gerenciar alternadamente. Ex: se voc&ecirc; tem 15 coment&aacute;rios 
+                  em sua loja e voc&ecirc; deseja que somente 10 coment&aacute;rios sejam 
+                  alternados entre o n&uacute;mero m&aacute;ximo que voc&ecirc; escolheu acima em 
+                  “coment&aacute;rios”, digite (10)<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Sele&ccedil;&atilde;o randônica 
+                  de novidades:</B> N&uacute;mero m&aacute;ximo de novidades que sua loja deve 
+                  gerenciar alternadamente, &eacute; o mesmo caso que “Sele&ccedil;&atilde;o 
+                  randônica de coment&aacute;rios”<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Sele&ccedil;&atilde;o randônica 
+                  de ofertas:</B> N&uacute;mero m&aacute;ximo de ofertas que sua loja deve 
+                  gerenciar alternadamente, &eacute; o mesmo caso que “Sele&ccedil;&atilde;o 
+                  randônica de coment&aacute;rios”<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Categorias a serem 
+                  listadas: </B> N&uacute;mero m&aacute;ximo de categorias que devem aparecer 
+                  em sua loja, obviamente deve ser igual ou 
+                  superior(preferencialmente) das categorias constantes em 
+                  “Produtos”<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Lista de novos 
+                  produtos: </B> N&uacute;mero m&aacute;ximo de novos produtos que devem 
+                  aparecer em sua loja;<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Mais vendidos:</B> 
+                  M&uacute;mero m&aacute;ximo de produtos mais vendidos que devem ser exibidos 
+                  em sua loja<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Tamb&eacute;m compraram: 
+                  </B> N&uacute;mero m&aacute;ximo de produtos que devem aparecer por terem 
+                  sido comprados juntamente com o produto visualizado<P> 
+                   
+
+<B>Imagens</B><P> 
+
+- As imagens dos produtos ficam na pasta comercio/images. Tenha em mente trabalhar com imagens no tamanho pequeno de
+100x100, n&atilde;o ultrapassando este tamanho em altura ou largura. Ista far&aacute; com que a imagem n&atilde;o fique destorcida.<p>
+
+<center><IMG src="images/admloja3.gif" border=0 width="515" height="300"></center><br>
+
+- Foi craida uma pasta dentro da pasta comercio chamada <b><font color="#000000">html</font></b> onde vai ficar as imagens de tamanhos grandes.
+Isto melhora a qualidade e pode-se adicionar quantas imagens de um mesmo produto e com mais informa&ccedil;&otilde;es em texto. Crie as p&aacute;ginas em html
+com as imagens dos produtos e textos e envie para a pasta html. Assim quando se clicar para ver mais sobre o produto abre a p&aacute;gina pop-up criada para isto.<p>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Largura da imagem 
+                  pequena:</B> Largura que voc&ecirc; deseja para as imagens dos 
+                  produtos de sua loja pode ser em pixels(mais comum) ou 
+                  cent&iacute;metros, se for usar padr&atilde;o 100x100 deixe em branco.<br>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Altura da imagem 
+                  pequena: </B> Altura que voc&ecirc; deseja para as imagens dos 
+                  produtos de sua loja pode ser em pixels(mais comum) ou 
+                  cent&iacute;metros, se for usar padr&atilde;o 100x100 deixe em branco.<br>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Largura da imagem 
+                  do cabe&ccedil;alho: </B>Largura que voc&ecirc; deseja para as imagens dos 
+                  cabe&ccedil;alhos de sua loja pode ser em pixels(mais comum) ou 
+                  cent&iacute;metros, se for usar padr&atilde;o 100x100 deixe em branco.<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Altura da imagem do 
+                  cabe&ccedil;alho:</B> Altura que voc&ecirc; deseja para as imagens dos 
+                  cabe&ccedil;alhos de sua loja pode ser em pixels(mais comum) ou 
+                  cent&iacute;metros, se for usar padr&atilde;o 100x100 deixe em branco.<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Largura da imagem 
+                  da subcategoria:</B> Largura que voc&ecirc; deseja para as imagens 
+                  das categorias e subcategorias – pixels e cent&iacute;metros, se for usar padr&atilde;o 100x100 deixe em branco.<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Altura da imagem da 
+                  subcategoria:</B> Altura que voc&ecirc; deseja para as imagens das 
+                  categorias e subcategorias – pixels e cent&iacute;metros, se for usar padr&atilde;o 100x100 deixe em branco.<br>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Calcular tamanho da 
+                  imagem: </B>preferencialmente deixe (true)<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Imagem 
+                  Obrigat&oacute;ria:</B> se voc&ecirc; deseja que as imagens sejam 
+                  obrigat&oacute;rias deixe (true), se n&atilde;o desejar deixe 
+                  (false) padr&atilde;o.<P> 
+                   
+
+<B>Entrega / Pacotes</B><P> 
+
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>C&oacute;digo do Pa&iacute;s: 
+                  </B> Normalmente &eacute; o numero correspondente ao seu pa&iacute;s, no Brasil adicione 30<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>CEP: </B> Deixe em branco<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Entre o peso m&aacute;ximo 
+                  do pacote que ir&aacute; entregar:</B> Digite o peso m&aacute;ximo que voc&ecirc; 
+                  far&aacute; entregas, n&atilde;o &eacute; preciso digitar nenhum simbolo de de peso 
+                  (Kg, Gr, etc.), apenas 1 ou 100<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Peso normal dos 
+                  pacotes:</B> Deixe essa op&ccedil;&atilde;o com 0 para n&atilde;o influenciar o bom 
+                  funcionamento do FRETE<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Pacotes grandes 
+                  incrementar porcentagem:</B> Se voc&ecirc; quiser cobrar um 
+                  adicional para entregas que voc&ecirc; considerar muito grande 
+                  digite aqui a porcentagem do adicional<br>
+              
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Taxa extra:</B> Se 
+                  desejar cobrar alguma taxa adicional sobre o transporte digite 
+                  a taxa aqui, n&atilde;o &eacute; preciso colocar o s&iacute;mbolo % adicione 10 para 10%.<P> 
+
+<B>Apresenta&ccedil;&atilde;o dos produtos</B><P>                   
+ 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Mostrar imagem do 
+                  produto: </B> Se voc&ecirc; deseja que as imagens de seus produtos 
+                  sejam exibidas juntamente com a lista, digite (1) caso n&atilde;o 
+                  deseja(Recomend&aacute;vel) deixe (0)<br> 
+
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Mostrar nome dos 
+                  fabricantes:</B> Se voc&ecirc; deseja que o nome do fabricante de 
+                  seus produtos apare&ccedil;am juntamente com a lista, digite (1), 
+                  caso n&atilde;o deseje digite (0)<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Mostrar modelo dos 
+                  produtos: </B> Se voc&ecirc; deseja que o modelo de seus produtos 
+                  apare&ccedil;am juntamente com a lista, digite (1), caso n&atilde;o deseje 
+                  digite (0)<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Mostrar nome dos 
+                  produtos:</B> Para mostrar o nome de seus produtos digite 
+                  (1)<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Exibir pre&ccedil;os dos 
+                  produtos:</B> Digite (1) para sim<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Mostrar quantidade 
+                  dos produtos:</B> Se voc&ecirc; desejar que a quantidade de seus 
+                  produtos sejam exibidas ao seu cliente e voc&ecirc; tiver optado por 
+                  checar o estoque em “Estoques” digite (1), caso n&atilde;o deseje 
+                  digite (0)<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Mostrar peso dos 
+                  produtos: </B> Se desejar mostrar o peso de seus produtos 
+                  digite (1), caso n&atilde;o (o que &eacute; mais comum) digite (0)<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Mostrar coluna 
+                  compre agora:</B> Se desejar que seu cliente tenha a op&ccedil;&atilde;o de 
+                  comprar seu produto diretamente pela lista de exibi&ccedil;&atilde;o, digite 
+                  (1), caso n&atilde;o deseje digite (0)<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Exibir filtros 
+                  categorias / fabricantes:</B> Deixe (0) para desabilitado e (1) 
+                  para habilitado<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Escolha localiza&ccedil;&atilde;o 
+                  dos bot&otilde;es anterior / pr&oacute;xima: </B> Digite (1) se quiser topo, 
+                  (2) se quiser em baixo ou (3) para ambos<P> 
+                   
+
+<B>Estoque</B><P>
+ 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Checar em estoque: 
+                  </B> Se deseja que para cada venda efetuada o sistema cheque o 
+                  estoque deixe (true), caso n&atilde;o deseje deixe (false)<br> 
+                   
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Subtrair do 
+                  estoque:</B> Se deseja que o sistema subtraia de seu estoque 
+                  em tempo real cada pedido efetuado deixe (true), caso n&atilde;o 
+                  deseje deixe (false)<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Permitir ir ao 
+                  caixa: </B> Se voc&ecirc; deseja que seu cliente efetive a compra 
+                  mesmo quando o produto n&atilde;o consta em estoque deixe (true), 
+                  caso n&atilde;o deseje deixe (false)<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Marcar produtos 
+                  fora de estoque: </B> Se voc&ecirc; deseja que os produtos que 
+                  estejam sem estoque sejam evidenciados voc&ecirc; deve efetuar sua 
+                  configura&ccedil;&atilde;o aqui, geralmente utiliza-se “****”<br> 
+                   
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Estoque baixo: 
+                  </B> Digite aqui a quantidade cr&iacute;tica de estoque que voc&ecirc; 
+                  deseja para sua loja deixe como 1.<P> 
+                   
+
+<B>Cores</B><P> 
+
+- Para modificar as cores da loja virtual o arquivo stylesheet.css tem que estar com 
+permiss&atilde;o (CHMOD) de escrita de 777, isto j&aacute; foi citado nas permiss&otilde;es. 
+Tenha <u>cuidado</u> ao modificar as cores pois pode desconfigurar toda a loja.<P>                  
+
+<B>Categorias/Produtos</B><P>
+
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Nova 
+                  categoria:</B> Clique 
+                  no bot&atilde;o "Nova Categoria" para editar. <br>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <B>Nome da 
+                  Categoria:</B> Digite o nome da categoria 
+                   nesse campo. <br>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Imagem da 
+                  categoria:</B> Clique em "Procurar" e 
+                  insira a imagem que voc&ecirc; deseja que seja relacionada &aacute; 
+                  categoria. <br>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Ordem:</B> Caso 
+                  voc&ecirc; deseje que tenha outra ordem que n&atilde;o seja a alfab&eacute;tica 
+                  (que &eacute; a mais comum) digite aqui a ordem que deseja que a 
+                  categoria seja exibida. <P>
+
+<center><IMG src="images/_11.gif" border=0 width="217" height="241"></center><br> 
+                  
+- Antes de mostrarmos como inserir um produto, &eacute; importante que aprenda a inserir o fabricante.<P> 
+                   
+
+<B>Fabricantes</B><P> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Adicionar 
+                  Fabricante:</B> Clique 
+                  em inserir para adicionar um fabricante.<br> 
+
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Nome do 
+                  fabricante:</B> Digite o nome do fabricante.<br>
+
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"><b>Imagem do 
+                  fabricante:</B> Insira o logo do fabricante. 
+                  <br> 
+
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>URL:</B> Se desejar 
+                  digite o endere&ccedil;o do site do fabricante. 
+                  <P> 
+
+<center><IMG src="images/_12.gif" border=0 width="204" height="214"></center><P> 
+                   
+
+<B>Produtos / Categorias</B><P>
+
+- Agora j&aacute; podemos dar a seqü&ecirc;ncia nessa 
+                  etapa, que mostra como inserir um produto. Caso voc&ecirc; 
+                  tenha categorias, n&atilde;o esque&ccedil;a de estar dentro dela para 
+                  adicionar um produto que deseje fazer parte dela.<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Novo 
+                  produto:</B> Clique no bot&atilde;o "Novo Produto" 
+                  para adicionar<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Status dos 
+                  produtos:</B> “Dispon&iacute;vel” se estiver pronto para venda e 
+                  “esgotado”, caso n&atilde;o esteja dispon&iacute;vel para venda<br>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Data que foi 
+                  disponibilizado: </B> Caso deseje mencionar na loja a data da 
+                  disponibiliza&ccedil;&atilde;o. <br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Fabricante:</B> 
+                  Selecionar o fabricante do produto. N&atilde;o esque&ccedil;a de efetuar o 
+                  cadastro dos fabricantes antes de iniciar o cadastro dos 
+                  produtos. Veja "Fabricantes"<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Nome do produto: 
+                  </B> Digite o nome do produto. N&atilde;o use nomes longos.<br>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Descri&ccedil;&atilde;o do 
+                  produto: </B>por neste campo as especifica&ccedil;&otilde;es t&eacute;cnicas do 
+                  produto. N&atilde;o use nomes longos.<P>
+ 
+<center><IMG src="images/_13.gif" border=0 width="363" height="213"></center><br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Quantidade: 
+                  </B> Caso voc&ecirc; fa&ccedil;a uso do administrador de estoque da loja, 
+                  coloque aqui a quantidade inicial do produto para que o 
+                  sistema baixe automaticamente seu estoque. Veja “Estoques” se 
+                  tiver alguma d&uacute;vida. <br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Modelo: </B> Caso a 
+                  esp&eacute;cie de seu produto exija modelo, basta colocar neste 
+                  campo.<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Imagem: 
+                  </B> Selecione a imagem do produto. <br>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>URL do produto: 
+                  </B> Se voc&ecirc; desejar linkar a imagem do produto para sua 
+                  respectiva p&aacute;gina dentro do site do fabricante, digite aqui o 
+                  endere&ccedil;o exato do produto. <br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Pre&ccedil;o: </B> Digite o 
+                  pre&ccedil;o. Os centavos devem ser precedidos por <SPAN 
+                  lang=pt-br>".", ex: 19.99<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Tipo de imposto: 
+                  </B> Caso deseje trabalhar com cadeia de impostos, selecione os 
+                  impostos cadastrados. Veja “Impostos”. <br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Peso: 
+                  </B> Fundamental se trabalhar com sedex ou outro meio de 
+                  entrega por peso. Ex. 900 gr, tem que por 0.9, 10 kg tem que 
+                  por 10, etc. <P>
+ 
+<center><IMG src="images/_14.gif" border=0 width="406" height="288"></center><br> 
+                   
+<B>Atributos</B><P>
+
+- Este item serve para realiza&ccedil;&atilde;o de configura&ccedil;&otilde;es 
+t&eacute;cnicas para alguns produtos, tais como adicionar valores extras nos 
+valores de entregas dos produtos para lugares n&atilde;o especificados.<P> 
+
+
+<center><IMG src="images/admloja4.gif" border=0 width="344" height="180"></center><br>
+                   
+<B>Coment&aacute;rios</B><P> 
+
+- Aqui voc&ecirc; visualizar todos os coment&aacute;rios feitos em seus 
+produtos. Voc&ecirc; pode edit&aacute;-los e at&eacute; mesmo apagar aqueles que 
+n&atilde;o sejam favor&aacute;veis a sua empresa<p> 
+
+<b>Ofertas<br></B><P> 
+
+- Aqui voc&ecirc; pode inserir suas ofertas, basta clicar em 
+novo produto, seleciona-lo na caixa de sele&ccedil;&atilde;o, digitar o 
+pre&ccedil;o de oferta, se desejar, por a data de expira&ccedil;&atilde;o da oferta 
+e clicar em inserir. <p>
+ 
+<center><IMG src="images/_15.gif" border=0 width="521" height="152"></center><br> 
+
+<b>Lan&ccedil;amentos</B><p> 
+
+- Visualiza&ccedil;&atilde;o dos produtos em lan&ccedil;amento ou adicionados por &uacute;timo.<p>
+
+ 
+<B>M&oacute;dulos de Pagamentos</B><P> 
+
+
+<b>boleto.php:</b><P> 
+
+<B>OBS:</b> Estamos disponibilizando 2 tipos de boletos em .zip o CobreBemInternet e o PhpBoleto-2.0, para que voc&ecirc; possa tentar implantar na loja virtual. 
+N&atilde;o tentamos instalar nenhum dos dois por isso n&atilde;o sabemos se realmente funciona.<p>
+
+                 <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <B>Habilitando o Boleto:</B> Clique com o bot&atilde;o 
+                  do mouse em cima do circulo verde a frente do boleto.php para 
+                  ativar essa op&ccedil;&atilde;o. Em seguida clique em 
+                  editar<p> 
+
+<center><IMG src="images/_16.gif" border=0 width="416" height="144"></center> <br>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Emitir boleto banc&aacute;rio?: </B> Deixe "1" para 
+                  sim ou "0" para n&atilde;o deixar essa forma de pagamento 
+                  habilitada. <br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Mensagem (Op&ccedil;&otilde;es de 
+                  Pagamento):</B> Boleto Banc&aacute;rio, &eacute; o nome que aparecer&aacute; 
+                  nas formas de pagamento. <br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Mensagem 
+                  (instru&ccedil;&otilde;es ao cliente):</B> Digite aqui a mensagem que 
+                  achar pertinente ao seu cliente, como por exemplo a que j&aacute; 
+                  consta pr&eacute;-configurada no campo. <br>
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>CGI - 
+                  Path:</B> Este &eacute; o caminho do cgi-bin do seu site, onde se encontra o CobreBemInternet.<p> 
+
+ 
+<center><IMG src="images/_17.gif" border=0 width="206" height="293"></center><br> 
+
+
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b> CobreBemInternet</B> O "CobreBem Internet" disponibilizado pela Thisf Inform&aacute;tica (http://www.thisf.com.br) 
+&eacute; gratuito para testes por 30 dias e para instalar ele em seu site, siga as instru&ccedil;&otilde;es que vem junto aos 
+arquivos de instala&ccedil;&atilde;o do <u>CobreBemInternet</u>, usando a senha de instala&ccedil;&atilde;o <B>203079</B>.<br>
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b> PhpBoleto-2.0</B> Este tamb&eacute;m ser&aacute; preciso ver as instru&ccedil;&otilde;es de uso dentro da pasta Docs junto ao <u>PhpBoleto2.0</u>.<p>
+
+
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>CC.php</B> Cart&atilde;o de cr&eacute;dito: Este software est&aacute; apto para a 
+                  implanta&ccedil;&atilde;o de pagamento por cart&atilde;o de cr&eacute;dito com assinatura 
+                  em arquivo (o cliente envia os dados e o lojista realiza o 
+                  processo por telefone). Para que voc&ecirc; possa aceitar essa forma 
+                  de pagamento voc&ecirc; dever&aacute; primeiro afiliar-se &agrave; administradora 
+                  que deseja (Visa, Mastercard, Amex, etc). Para pagamento com 
+                  processamento on-line com cart&atilde;o de cr&eacute;dito &eacute; necess&aacute;rio 
+                  contratar um desenvolvedor para instalar na loja o software da 
+                  operadora<br> 
+                   
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>mail.php</B> Este m&oacute;dulo de pagamento serve para pagar pelo correio, ou pela caixa postal,
+habilite ele adicione seus dados e clique em "Atualizar"<br> 
+                   
+<IMG src="images/lista.gif" border=0 width="10" height="10"> <b>transfer&ecirc;ncia.php</B> Para editar transfer&ecirc;ncia, (m&oacute;dulo banc&aacute;rio) clique com o 
+bot&atilde;o do mouse em cima do circulo verde a frente do <u>transfer&ecirc;ncia.php</u> para ativar essa 
+op&ccedil;&atilde;o e em seguida clique em editar.<p>
+ 
+<center><IMG src="images/_21.gif" border=0 width="459" height="149"></center><br> 
+
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b>Aceitar Dep&oacute;sito/Transfer&ecirc;ncia Banc&aacute;ria: </B> Para aceitar "1", 
+                  para n&atilde;o aceitar "0". <br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Mensagem (Op&ccedil;&atilde;o de Pagamento)</B> 
+                  Digite o nome que deseja que apare&ccedil;a para esta forma de pagamento. <br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Mensagem 
+                  (instru&ccedil;&otilde;es p/ clientes)</B> Digite o 
+                  texto que aparecer&aacute; na confirma&ccedil;&atilde;o da compra 
+                  Titular da conta banc&aacute;ria - digite aqui o titular da 
+                  conta. <p>
+ 
+<center><IMG src="images/_22.gif" border=0 width="209" height="222"></center><br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b> Nome do banco:</B> Digite aqui o nome do banco<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Ag&ecirc;ncia: </B> Digite aqui o n&uacute;mero da ag&ecirc;ncia<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>Conta 
+                  Corrente</B>: Digite aqui o numero de 
+                  sua conta corrente. <p>
+ 
+<center><IMG src="images/_23.gif" border=0 width="143" height="173"></center><br> 
+                   
+<B>Frete</B><p> 
+
+- Para log&iacute;stica de entrega oferecemos um f&aacute;cil sistema 
+que permite a personaliza&ccedil;&atilde;o de fretes a n&iacute;vel Nacional (Brasil), podendo ser utilizadas por exemplo tabelas como 
+sedex e encomenda normal dos Correios.<p> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b>
+                  remessa_nacional.php: (Sedex)</B> Veja qual &eacute; a cidade de 
+                  origem e configure as zonas de tarifa&ccedil;&atilde;o, normalmente os valores aqui s&atilde;o variados.<br> 
+
+                  <IMG  
+                  src="images/lista.gif" 
+                   border=0 width="10" height="10"> <b> 
+                  remessa_nacional_2.php: (normal)</B> Veja qual &eacute; a cidade de 
+                  origem e configure as zonas de tarifa&ccedil;&atilde;o, geralmente aqui o valor &eacute; &uacute;nico para o Brasil todo.<p> 
+                   
+<center><IMG src="images/_25.gif" border=0 width="232" height="205"></center><br> 
+
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b>Exemplo de como configurar o Frete:</b><br> 
+1:8.1,2:9.2 &nbsp;  1 &eacute; o quilo = 8.1 &eacute; o valor R$ 8,10, 2 &eacute; o quilo = 9.2 &eacute; o valor R$ 9,20 e assim por diante.<br> 
+- Para configurar o Frete nacional por sedex (mais utilizado), utilize as tabelas de pre&ccedil;os e tarifas do correio.<p> 
+
+
+<b>Clientes</B><P> 
+                   
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b>Clientes</B> Nessa etapa voc&ecirc; pode visualizar, 
+alterar ou excluir todos os cadastrados na sua Loja Virtual. Voc&ecirc; ainda ter&aacute; a possibilidade de enviar informativos para os 
+seus clientes<br> 
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b>Pedidos</B> Aqui voc&ecirc; poder&aacute; visualizar todos os pedidos feitos na 
+Loja e alterar o status de cada pedido<p> 
+
+
+<b>Localiza&ccedil;&atilde;o / Impostos / Moedas</b><p>
+ 
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b>Pa&iacute;ses</B> J&aacute; v&ecirc;m pr&eacute; configurados, se 
+desejar mudar sigla ou nome, basta adicionar novos Pa&iacute;ses ou editar os j&aacute; existentes<br> 
+
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b> Estado</B> J&aacute; v&ecirc;m pr&eacute; configurados, se 
+desejar mudar alguma informa&ccedil;&atilde;o de um Pa&iacute;s ou adicionar um 
+pa&iacute;s, basta adicionar um Estado ou editar os j&aacute; existentes<br> 
+
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b> Zonas de impostos</b> Se desejar criar impostos 
+distintos por regi&atilde;o, voc&ecirc; deve criar as zonas geogr&aacute;ficas aqui<br> 
+
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b> Tipo de imposto</B> Aqui voc&ecirc; cadastra os impostos 
+(geralmente n&atilde;o cadastra-se impostos j&aacute; que est&atilde;o embutidos em seu pre&ccedil;o final de venda)<br> 
+
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b> Porcentagem</B> Para adicionar novas taxas de 
+impostos basta clicar em nova taxa e seguir os passos subsequentes<p>
+
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b>Moedas</B> O “Real” j&aacute; est&aacute; pr&eacute; configurado como padr&atilde;o e a loja virtual conta com o Dollar e o Euro j&aacute; configurados.<p>
+
+<b>Linguagens</b><p> 
+
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b>Linguagens</B> O “Portugu&ecirc;s j&aacute; est&aacute; pr&eacute; configurado e tamb&eacute;m tem o ingl&ecirc;s. Se 
+desejar adicionar linguagem, clique em nova linguagem e adicione a sua j&aacute; preparada nova linguagem.<P> 
+
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b>OBS:</b> Para modificar o texto da linguagem portugu&ecirc;s existente voc&ecirc; pode ir: <br><b> no comercio: <font color="#000000">comercio/includes/languages/portugu&ecirc;s.php e comercio/includes/languages/portugu&ecirc;s/</font></b> e no<br>
+<b> no admin: <font color="#000000">comercio/admin/includes/languages/portugu&ecirc;s.php e comercio/admin/includes/languages/portugu&ecirc;s/</font></b> (localmente, na sua m&aacute;quina fica mais f&aacute;cil) e fazer as altera&ccedil;&otilde;es direto nos arquivos.
+Isto vale pro ingl&ecirc;s tamb&eacutem.<br> - Depois de alterado fa&ccedil;a o upload do arquivo para seu server (site).<P> 
+
+<center><IMG src="images/admloja5.gif" border=0 width="458" height="250"></center><br> 
+                   
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b>Status dos pedidos:</B> Voc&ecirc; pode criar o padr&atilde;o de 
+acompanhamento de suas vendas. J&aacute; vem configurado: Pendente – Processando e Enviado. Isto serve para se ter um controle
+sobre as vendas j&aacute; entregues.<br>
+
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b>Produtos mais vistos</B> Aqui voc&ecirc; pode 
+acompanhar a visualiza&ccedil;&atilde;o de todos os seus produtos, os mais e os menos vistos<br> 
+
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <b> Produtos mais comprados</B> Aqui voc&ecirc; pode visualizar todos 
+seus produtos, os mais e os menos vendidos<br> 
+                   
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <B>Total de pedidos por cliente</B> Conhe&ccedil;a aqui seus melhores e piores clientes<p>
+
+<center>
+<IMG src="../../../../../../Documents%20and%20Settings/ALESSANDRO/Meus%20documentos/Minhas%20Webs/admloja6.gif" border=0 width="427" height="250"></center><br>
+
+ 
+<b>Ferramentas</b><P>
+
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <B>C&oacute;pia de seguran&ccedil;a:</B> &Eacute; de extrema importância que 
+voc&ecirc; mantenha sempre uma c&oacute;pia de seguran&ccedil;a de sua loja. Clique em “backup”, selecione o compactador de sua 
+prefer&ecirc;ncia, (n&atilde;o use compactar pode dar erros). Tente manter uma c&oacute;pia no server para uma emerg&ecirc;cia.
+Ela fica na pasta <u>admin/backup</u>, e tente sempre manter atualizado isto.<p> 
+
+<center><IMG src="images/_24.gif" border=0 width="209" height="293"></center><br> 
+
+<IMG  src="images/lista.gif" border=0 width="10" height="10"> <B>Editar textos:</B> Por aqui voc&ecirc; pode configurar 
+todos os textos de sua loja. J&aacute; vem pr&eacute;-configurado, por&eacute;m se 
+desejar, basta modifica-los. Neste caso voc&ecirc; tem que dar permiss&atilde;o de escrtita (CHMOD) de 777 em todos os arquivos
+para que seja modificado por aqui. Veja em <u>Linguagens</u> mais acima uma maneira mais f&aacute;cil de editat os textos.<P>
+                   
+<b>D&uacute;vidas</b><P>
+
+- Acho que quase tudo foi abordado neste manual de instala&ccedil;&atilde;o, mais se surgir alguma duvida poste ela no forum do Supernuke.<br> 
+- Este manual j&aacute; est&aacute; incluido no admin da loja virtual como uma p&aacute;gina para tirar d&uacute;vidas.<p>
+
+&nbsp;  &nbsp; &nbsp; <a target="_blank" href="http://www.supernuke.com.br"><b>Equipe Supernuke</b></a><P>
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></CENTER></DIV>

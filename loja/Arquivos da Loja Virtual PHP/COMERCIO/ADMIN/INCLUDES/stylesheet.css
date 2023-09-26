@@ -1,0 +1,175 @@
+/*
+  $Id: stylesheet.css,v 1.19 2002/01/11 10:09:09 hpdl Exp $
+
+  osCommerce, Open Source E-Commerce Solutions
+  http://www.oscommerce.com
+
+  Copyright (c) 2002 osCommerce
+
+  Released under the GNU General Public License
+*/
+
+A { color:#000000; text-decoration:none; }
+A.whitelink { color:#000000; text-decoration:none; }
+.blacklink { color:#000000; text-decoration:none; }
+.bluelink { color:#000000; text-decoration:none; }
+A:hover { color:#000000; text-decoration:underline; }
+A:hover.blacklink { color:#000000; text-decoration:underline; }
+A:hover.bluelink { color:#000000; background-color: #000000; text-decoration:underline; }
+.boxborder { border-color:#000000; border-style:solid; border-width:1; }
+.specialPrice { color: #000000; }
+.oldPrice { text-decoration: line-through; }
+
+BODY {   background-color: #FFFFFF;   color: #000000;   margin: 0px;  scrollbar-face-color: #FFFFFF; scrollbar-highlight-color: #FFFFFF; scrollbar-3dlight-color: #B2C5D9; scrollbar-darkshadow-color: #FFFFFF; scrollbar-shadow-color: #B2C5D9; scrollbar-arrow-color: #B2C5D9; scrollbar-track-color: #FFFFFF;}
+
+TR.header {
+	background-color: #F4F6FB;
+}
+
+TR.headerNavigation {
+	background-color: #B2C5D9;
+	color: #000000;
+}
+
+TD.headerNavigation {
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 12px;
+	font-weight : bold;
+}
+
+TR.footer {
+  background-color : #F4F6FB;
+  color : #000000;
+}
+
+TD.footer {
+  font-family : Tahoma, Verdana, Arial, sans-serif;
+  font-size : 12px;
+  font-weight : bold;
+}
+
+TD.menuBoxHeading {
+	font-family : Tahoma, Verdana, Arial, sans-serif;
+	font-size : 12px;
+	background-color : #B2C5D9;
+	border-color : #000000;
+	border-style : solid;
+	border-width : 1px;
+}
+
+TD.infoBoxHeading {
+	font-family : Tahoma, Verdana, Arial, sans-serif;
+	font-size : 10px;
+  font-weight: bold;
+}
+
+A.infoBoxHeading:hover {
+  color : #000000;
+  text-decoration: underline;
+}
+
+TD.infoBox, SPAN.infoBox {
+	font-family : Verdana, Arial, sans-serif;
+	font-size : 10px;
+  background-color: #ffffff;
+}
+
+TD.boxContents {
+  font-family : Verdana, Arial, sans-serif;
+  font-size : 10px;
+  background-color: #FFFFE6;
+}
+
+TD.errorBox {
+	font-family : Verdana, Arial, sans-serif;
+	font-size : 10px;
+    background-color: #ffb3b5;
+}
+
+TR.selectedRow, TD.box {
+  background-color: #B2C5D9;
+}
+
+TR.boxHeading {
+  background-color: #B2C5D9;
+}
+
+TABLE.topBarTitle {
+  background-color : #FFFFE6;
+  border-color : #000000;
+  border-style : solid;
+  border-width : 1px;
+}
+
+TD.topBarTitle {
+  font-family : Tahoma, Verdana, Arial, sans-serif;
+  font-size : 12px;
+}
+
+TD.pageHeading, DIV.pageHeading {
+  font-family : Verdana, Arial, sans-serif;
+  font-size : 18px;
+}
+
+TR.subBar {
+  background-color : #F4F7FD;
+}
+
+TD.subBar {
+  font-family : Verdana, Arial, sans-serif;
+  font-size : 10px;
+  color : #000000;
+}
+
+TD.tableHeading {
+  font-family : Verdana, Arial, sans-serif;
+  font-size : 10px;
+  font-weight : bold;
+}
+
+TR.tableRow {
+  background-color: #FFFFE6;
+}
+
+TR.tableRowOver {
+  background-color: #CC9999;
+}
+
+TD.smallText, SPAN.smallText, TD.tableData {
+  font-family : Verdana, Arial, sans-serif;
+  font-size : 10px;
+}
+
+TD.main, P.main {
+  font-family : Verdana, Arial, sans-serif;
+  font-size : 12px;
+}
+
+CHECKBOX, INPUT, RADIO, SELECT, TEXTAREA, FILE {
+  font-family : Verdana, Arial, sans-serif;
+  font-size : 11px;
+}
+
+TD.formArea {
+  background-color : #f1f9fe;
+  border-color : #7b9ebd;
+  border-style : solid;
+  border-width : 1px;
+}
+
+TD.formAreaTitle {
+  font-family : Tahoma, Verdana, Arial, sans-serif;
+  font-size : 12px;
+  font-weight : bold;
+}
+
+TR.attributes-odd {
+  background-color : #f4f7fd;
+}
+
+TR.attributes-even {
+  background-color : #ffffff;
+}
+
+.fieldRequired { font-family: Verdana, Arial, sans-serif; font-size: 10px; color: #ff0000; }
+

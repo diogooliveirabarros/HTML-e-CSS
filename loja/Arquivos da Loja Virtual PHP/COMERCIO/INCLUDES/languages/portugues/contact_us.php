@@ -1,0 +1,14 @@
+<?php
+
+define('SUB_BAR_TITLE', 'Tem alguma dúvida ou sugestão a fazer?');
+define('SUB_BAR_TITLE_SENT', 'Mensagem Enviada');
+define('TOP_BAR_TITLE', 'Fale Conosco');
+define('HEADING_TITLE', 'Fale Conosco');
+define('NAVBAR_TITLE', 'Fale Conosco');
+define('TEXT_SUCCESS', 'Seu e-mail foi enviado com sucesso. Dentro em breve nossos operadores entrarão em contato com resposta às suas dúvidas ou sugestões.');
+define('EMAIL_SUBJECT', 'Dúvidas ou Sugestões a ' . STORE_NAME);
+
+define('ENTRY_NAME', 'Nome Completo:');
+define('ENTRY_EMAIL', 'E-Mail:');
+define('ENTRY_ENQUIRY', 'Mensagem:');
+?>

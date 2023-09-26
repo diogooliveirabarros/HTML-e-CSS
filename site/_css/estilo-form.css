@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+/* Corpo do formulário*/
+div#form-option {
+    background-color: white;
+    width: 800px;
+    height: 630px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+    margin: -9px auto -10px auto;
+    padding: 5px;
+    border: 1px solid #000000;
+}
+
+div#form-option h2 {
+    font-family: "Algerian", sans-serif;
+    font-size: 20pt;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+div#form-option h3 {
+    font-family: "Agency FB", sans-serif;
+    font-size: 14pt;
+    color: red;
+    border: 1px solid red;
+    margin: -15px auto 25px auto;
+    text-align: center;
+}
+
+body#casa {
+    background: url("../_imagens/fundo-form-casa.png") no-repeat;
+}
+
+body#terreno {
+    background: url("../_imagens/fundo-form-terreno.png") no-repeat;
+}
+
+/* Fieldset Maior */
+fieldset#fieldset-maior {
+    border: 1px solid rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: -20px;
+}
+
+fieldset#fieldset-maior label {
+    font-family: "Calibri", sans-serif;
+}
+
+fieldset#fieldset-maior legend {
+    font-family: "Arial Black", sans-serif;
+}
+
+fieldset#fieldset-maior table {
+    margin: auto 28px auto 28px;
+}
+
+fieldset#fieldset-maior table td {
+    padding: 0px 10px 0px 10px;
+}
+
+/* Fieldset Menor 1*/
+fieldset#fieldset-menor1 {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: block;
+    float: left;
+    margin: 0px 30px 0px 50px;
+    border: 1px solid rgba(0,0,0,0.3);
+    height: 120px;
+}
+
+fieldset#fieldset-menor1 label {
+    font-family: "Calibri", sans-serif;
+}
+
+fieldset#fieldset-menor1 legend {
+    font-family: "Arial Black", sans-serif;
+}
+
+fieldset#fieldset-menor1 table {
+    margin: auto 28px auto 28px;
+}
+
+fieldset#fieldset-menor1 table td {
+    padding: 0px 10px 0px 10px;
+}
+
+/* Fieldset Menor 2*/
+fieldset#fieldset-menor2 {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: block;
+    float: left;
+    margin-left: 20px;
+}
+
+fieldset#fieldset-menor2 {
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
+fieldset#fieldset-menor2 label {
+    font-family: "Calibri", sans-serif;
+}
+
+fieldset#fieldset-menor2 legend {
+    font-family: "Arial Black", sans-serif;
+}
+
+fieldset#fieldset-menor2 table {
+    margin: auto 28px auto 28px;
+}
+
+fieldset#fieldset-menor2 table td {
+    padding: 0px 10px 0px 10px;
+}

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+div#interface {
+    background-color: rgba(0, 0, 0, 0.44);
+    width: 1000px;
+    height: 400px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    margin: 110px auto auto auto;
+    padding: 5px;
+    border: 1px solid #000000;
+}
+
+div#interface h1 {
+    font-family: "Bell MT", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 1px 3px 10px #000000;
+}
+
+fieldset#sexo {
+    width: 100px;
+}
+
+legend {
+    font-family: "Arial Black", sans-serif;
+}

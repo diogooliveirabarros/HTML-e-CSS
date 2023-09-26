@@ -1,0 +1,28 @@
+<?php
+/*
+  $Id: zones.php,v 1.3 2001/09/19 11:12:45 mbs Exp $
+
+  The Exchange Project - Community Made Shopping!
+  http://www.theexchangeproject.org
+
+  Copyright (c) 2000,2001 The Exchange Project
+
+  Released under the GNU General Public License
+*/
+
+define('TOP_BAR_TITLE', 'Paises e seus Estados');
+define('HEADING_TITLE', 'Países e seus Estados');
+
+define('TABLE_HEADING_COUNTRY_NAME', 'País');
+define('TABLE_HEADING_ZONE_NAME', 'Estado');
+define('TABLE_HEADING_ZONE_CODE', 'Código');
+define('TABLE_HEADING_ACTION', 'Ação');
+
+define('TEXT_INFO_EDIT_INTRO', 'Faça as mudanças necessárias');
+define('TEXT_INFO_ZONES_NAME', 'Nome do Estado:');
+define('TEXT_INFO_ZONES_CODE', 'Código do Estado:');
+define('TEXT_INFO_COUNTRY_NAME', 'País:');
+define('TEXT_INFO_INSERT_INTRO', 'Insira os dados do estado');
+define('TEXT_INFO_DELETE_INTRO', 'Tem certeza que deseja eliminar este estado?');
+define('TEXT_INFO_HEADING_NEW_ZONE', 'Novo Estado');
+?>

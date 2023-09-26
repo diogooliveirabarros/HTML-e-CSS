@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+/* Cor Destaque do Site (12,189,226) */
+/* Tamanho TOTAL da imagem principal do site - width:1250 height:170 */
+/* Tamanho PARCIAL com o efeito - width: 1010 height:170 */
+/* Tamanho no ícone do MENU - width:170 height: 170 */
+
+        /* Formatação de alguns componentes */
+
+p {
+    text-align: justify; /* Justifica o texto do paragráfo */
+    text-indent: 50px; /* Deixa um espaço no ínicio do paragráfo */
+}
+
+a {
+    color: #000000; /* Cor do link */
+    text-decoration: none; /* Retira o traço do link */
+}
+
+a:hover {
+    color: rgb(12,189,226);
+}
+
+        /* Formatação do site */
+
+body {
+    font-family: Arial, sans-serif; /* Fonte */
+    background-color: rgba(0,0,0,0.1); /* Fundo do site */
+}
+
+div#interface {
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4); /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    margin: -1px auto auto auto; /*Define a margem de fora da interface(cima, direita, baixo e esquerda)*/
+    padding: 10px; /* Define a margem de dentro da interface(cima, direita, baixo e esquerda)*/
+    width: 1250px; /* Largura */
+    background-color: #ffffff; /* Fundo da interface */
+    /* border: 1px solid #000000; /* Borda do cabeçalho (Largura, tipo e cor)*/
+}
+
+            /* Cabeçalho */
+
+header#cabecalho {
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5); /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    /* border: 1px solid #000000; /* Borda do cabeçalho (Largura, tipo e cor)*/
+    padding: 10px; /* Espaçamento interno */
+    height: 150px; /* Altura */
+    width: 980px; /* Largura */
+    background: url("../_imagens/fundo.png") no-repeat;
+    margin-left: 10px; /* Margem da Esquerda */
+    margin-bottom: 40px;
+}
+
+header#cabecalho h2 {
+    font-family: Arial, sans-serif; /* Tipo de fonte */
+    font-style: italic;
+    font-size: 12pt; /* Tamanho da fonte */
+    color: #000000; /* Cor da fonte */
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    text-align: right; /* Alinhamento do texto */
+    margin: 85px 15px 0px 0px; /* Margem do topo */
+}
+
+img#icone {
+    display: block;
+    float: right;
+    margin: 15px 20px 0px 0px;
+}
+
+div#imagem-externa img {
+    display: block;
+    float: left;
+    margin: 0px 0px 0px -30px;
+    width: 140px;
+    height: 120px;
+}
+
+         /* Formatação do Menu */
+
+nav#menu { /*Transforma o menu em um bloco, para que seja flutuante na página*/
+    display: block;
+}
+
+nav#menu ul {
+    display: block;
+    float: left;
+    margin: -25px 0px 0px 200px;
+    font-family: "Arial", sans-serif;
+    font-weight: bold; /*Colocar em negrito*/
+    list-style: none; /*Indica a retirada das marcações(Bolinhas)*/
+    text-transform: uppercase; /*Transforma todas as letras em maiúsculas*/
+    top: -10px; /*Distância do topo do site*/
+    left: 325px; /*Distância do lado esquerdo para o direito*/
+    font-size: 13pt; /* Tamanho da fonte */
+}
+
+nav#menu li {
+    display: inline-block; /*Exibe o texto do menu em uma única linha horizontal*/
+    background-color: rgba(0,0,0,0.15); /*Fundo Cinza*/
+    padding: 10px; /*Controla o espaço dentro do fundo*/
+    margin: 2px; /*Controla o espaço fora do fundo*/
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.5); /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+   /* border: 1px solid #000000; /* Borda do cabeçalho (Largura, tipo e cor)*/
+}
+
+nav#menu1 { /*Transforma o menu em um bloco, para que seja flutuante na página*/
+    display: block;
+}
+
+nav#menu1 ul {
+    display: block;
+    float: left;
+    margin: -25px 0px 0px 856px;
+    font-family: "Arial", sans-serif;
+    font-weight: bold; /*Colocar em negrito*/
+    list-style: none; /*Indica a retirada das marcações(Bolinhas)*/
+    text-transform: uppercase; /*Transforma todas as letras em maiúsculas*/
+    top: -10px; /*Distância do topo do site*/
+    left: 325px; /*Distância do lado esquerdo para o direito*/
+    font-size: 13pt; /* Tamanho da fonte */
+}
+
+nav#menu1 li {
+    display: inline-block; /*Exibe o texto do menu em uma única linha horizontal*/
+    background-color: rgb(128, 197, 255); /*Fundo Cinza*/
+    padding: 10px; /*Controla o espaço dentro do fundo*/
+    margin: 2px; /*Controla o espaço fora do fundo*/
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.5); /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    border: 1px solid #000000; /* Borda do cabeçalho (Largura, tipo e cor)*/
+}
+
+           /* Painel de Avisos */
+
+div#avisos {
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4); /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    margin: -30px 0px 0px 248px; /*Define a margem de fora da interface(cima, direita, baixo e esquerda)*/
+    background-color: rgba(0,0,0,0.03); /*Fundo Cinza*/
+    border: 1px solid #000000; /* Borda do cabeçalho (Largura, tipo e cor)*/
+    width: 761px;
+    height: 30px;
+}
+
+div#avisos h2 {
+    font-family: "Tahoma", sans-serif;
+    color: #1f00ff;
+    font-size: 12pt;
+    text-align: center;
+    margin-top: 5px;
+}
+
+           /* Corpo */
+
+section#corpo {
+    display: block; /*Transforma em um bloco*/
+    float: left; /* Flutua à esquerda */
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5); /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    width: 720px; /* Largura */
+    margin: 20px 10px 10px 10px; /*Define a margem de fora da interface(cima, direita, baixo e esquerda)*/
+    padding: 20px; /* Define a margem de dentro da interface(cima, direita, baixo e esquerda)*/
+    background-color: rgba(0,0,0,0.03); /* Fundo da interface */
+}
+
+div.conteudo h2 {
+    font-family: Calibri, sans-serif; /* Fonte */
+    text-align: center; /* Alinhamento */
+    font-size: 18pt; /* Tamanho da fonte */
+    margin-top: 0px;
+    border-bottom: 1px solid #000000;
+}
+
+div.conteudo img {
+    width: 714px; /* Largura */
+    height: 250px; /* Altura */
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5); /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    margin: 20px auto 20px 2px; /* Margem */
+    border: 1px solid #000000;
+}
+
+fieldset#fieldset-principal {
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+
+fieldset#fieldset-principal label {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+fieldset#fieldset-interno {
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+fieldset#fieldset-interno img {
+    border: 1px solid #000000;
+    width: 100px; /* Largura */
+    height: 100px; /* Altura */
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5); /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    margin: 20px 30px 20px 30px; /* Margem */
+}
+
+fieldset#fieldset-interno legend {
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+}
+
+           /* Barra Lateral Esquerda */
+
+aside#lateral-esquerdo {
+    display: block; /*Transforma em um bloco*/
+    float: left; /* Flutua à esquerda */
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5); /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    height: 500px; /* Altura */
+    width: 199px; /* Largura */
+    margin: -28px 10px 10px 10px; /*Define a margem de fora da interface(cima, direita, baixo e esquerda)*/
+    padding: 10px 10px 0px 10px; /* Define a margem de dentro da interface(cima, direita, baixo e esquerda)*/
+    background-color: rgba(0,0,0,0.03); /* Fundo da interface */
+    /* border: 1px solid #000000; /* Borda da lateral esquerda (Largura, tipo e cor)*/
+}
+
+aside#lateral-esquerdo h2 {
+    background-color: rgb(12,189,226); /*Fundo Cinza*/
+    box-shadow: 0px 0px 1px #000000; /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    text-align: center; /* Alinhamento do texto */
+    font-family: Candara, sans-serif; /* Fonte */
+    border: 1px solid #000000; /* Borda do cabeçalho (Largura, tipo e cor)*/
+}
+
+aside#lateral-esquerdo h3 {
+    background-color: rgba(0,0,0,0.15); /*Fundo Cinza*/
+    box-shadow: 0px 0px 1px #000000; /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    text-align: center; /* Alinhamento do texto */
+    font-family: Candara, sans-serif;
+    border: 1px solid #000000; /* Borda do cabeçalho (Largura, tipo e cor)*/
+}
+
+aside#lateral-esquerdo h4 {
+    font-family: Calibri, sans-serif; /* Fonte */
+    font-size: 10pt; /* Tamanho da fonte */
+    text-align: right; /* Alinhamento do texto */
+}
+
+aside#lateral-esquerdo a {
+    text-transform: uppercase; /*Transforma todas as letras em maiúsculas*/
+    font-size: 15pt; /* Tamanho da fonte */
+    box-shadow: 0px 0px 1px #000000; /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    padding: 5px; /* Define a margem de dentro da interface(cima, direita, baixo e esquerda)*/
+}
+
+aside#lateral-esquerdo p {
+    text-indent: 0px; /* Retiro a indentação pra o link voltar para o lado esquerdo */
+}
+
+           /* Barra Lateral Direita */
+
+aside#lateral-direito {
+    display: block; /*Transforma em um bloco*/
+    float: inherit; /* Flutua */
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5); /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    height: 730px; /* Altura */
+    width: 199px; /* Largura */
+    margin: -31px 10px 10px 1027px; /*Define a margem de fora da interface(cima, direita, baixo e esquerda)*/
+    padding: 10px 10px 0px 10px; /* Define a margem de dentro da interface(cima, direita, baixo e esquerda)*/
+    background-color: rgba(0,0,0,0.03); /* Fundo da interface */
+    /* border: 1px solid #000000; /* Borda (Largura, tipo e cor)*/
+}
+
+aside#lateral-direito h2 {
+    background-color: rgb(12,189,226); /*Fundo Cinza*/
+    box-shadow: 0px 0px 1px #000000; /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    text-align: center; /* Alinhamento do texto */
+    font-family: Candara, sans-serif;
+    border: 1px solid #000000; /* Borda (Largura, tipo e cor)*/
+    margin: auto auto 10px auto;
+}
+
+div.anuncios img {
+    width: 180px;
+    height: 150px;
+    box-shadow: 0px 0px 1px #000000; /* Deslocamento (lateral,vertical,espalhamento, e cor) */
+    position: relative;
+    top: 0px;
+    left: 10px;
+    margin-bottom: 10px;
+}
+
+            /* Rodapé */
+
+footer#rodape {
+    clear: both; /*Limpa a configuração dele ter que flutuar(Ele fica fora do bloco e se move até embaixo)*/
+    border-top: 1px solid rgba(0,0,0,0.2);
+    height: 50px; /* Altura */
+    width: 1200px; /* Largura */
+    margin: 10px 10px 10px 10px; /*Define a margem de fora da interface(cima, direita, baixo e esquerda)*/
+    padding: 5px; /* Define a margem de dentro da interface(cima, direita, baixo e esquerda)*/
+}
+
+footer#rodape h2 {
+    font-family: Calibri, sans-serif; /* Tipo de fonte */
+    font-size: 10pt; /* Tamanho da fonte */
+    text-align: center; /* Alinhamento do texto */
+}
+

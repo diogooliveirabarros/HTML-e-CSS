@@ -1,0 +1,103 @@
+FONT	{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+TD		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+BODY	{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+P		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+DIV		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+
+/* Form elements */
+form{display:inline}
+
+input{margin-bottom:2px;margin-top:2px;text-indent:2px}
+
+input,textarea,select{border-color:#000000;color:#000000;
+font-size:11px}
+
+/* Fancy form styles for IE */
+input,textarea,select{background: #ffffff;border-width:1px;font:normal 11px Verdana,Arial,Helvetica,sans-serif}
+
+/* The buttons used for bbCode styling in message post */
+input.button{background:#fafafa;color:#000000}
+input.catbutton{background:#fafafa;color:#000000;font-size:10px}
+,input.button{background:#fafafa;color:#000000;font-size:10px}
+/* None-bold submit button */
+input.liteoption{background: #fafafa;color:#000000}
+/* The main submit button option */
+input.mainoption{background:#fafafa;color:#000000;font-weight:bold}
+/* The text input fields background colour */
+input.post,textarea.post,select{background: #ffffff;color:#000000}
+
+/* This is the line in the posting page which shows the rollover
+help line. This is actually a text box,but if set to be the same
+colour as the background no one will know;)
+*/
+.helpline{background:#e1e9f2;border-style:none;color:#000000}
+
+/* Quote & Code blocks */
+.code{background:#fafafa;border:1px solid #1F7FB0;color:#006600; font:11px Courier,"Courier New",sans-serif;padding:5px}
+.quote{background:#fafafa;border:1px solid #1F7FB0;color:#444444; font:11px/125% Verdana,Arial,Helvetica,sans-serif}
+
+.bodyline{background: #4682B4;color:#000000;border:1px solid #4682B4}
+
+BODY {   background-color: #FFFFFF; color: #000000; margin: 2px; font:12px Verdana,Arial,Helvetica,sans-serif; scrollbar-face-color: #FFFFFF; scrollbar-highlight-color: #FFFFFF; scrollbar-3dlight-color: #4682B4; scrollbar-darkshadow-color: #FFFFFF; scrollbar-shadow-color: #4682B4; scrollbar-arrow-color: #4682B4; scrollbar-track-color: #FFFFFF;}
+
+hr{border: 0px solid #ffffff;border-top-width:1px;height:0px}
+
+a:link,a:active,a:visited,a.postlink{color:#000000;text-decoration:none}
+a:hover,a.topictitle:hover{color:#000000;text-decoration:underline}
+.title 		 {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.content 	 {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica}
+.block-title {BACKGROUND: none; COLOR: #4682B4; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica}
+.storytitle  {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.storycat	 {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+.boxtitle 	 {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.boxcontent  {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica}
+.option 	 {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.tiny		 {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.small		 {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 9px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+
+
+/* loja */
+
+
+Body {  background-color: #FFFFFF; }
+FORM { 	display: inline; }  
+TR.header {   background-color: #FFFFFF; }  
+TR.headerNavigation {   font-family: Verdana, Arial, sans-serif;   font-size: 10px;  color: #000000;  }  
+TD.headerNavigation {   font-family: Verdana, Arial, sans-serif;   font-size: 10px;  color: #000000; }  
+A.headerNavigation {    font-family: Verdana, Arial, sans-serif;   font-size: 10px;  color: #000000;  }  
+TR.headerError {   background-color: #ff0000; }  
+TD.headerError {   font-family: Tahoma, Verdana, Arial, sans-serif;   font-size: 12px;   background-color: #ff0000;   color: #ffffff;   text-align : center; }  
+TR.headerInfo {   background-color: #00ff00; }  
+TD.headerInfo {   font-family: Tahoma, Verdana, Arial, sans-serif;   font-size: 12px;   background-color: #00ff00;   color: #ffffff;   text-align : center; }  
+TR.footer {   background-color : #b6b7cb; }  
+TD.footer {   font-family : Verdana, Arial, sans-serif;   font-size : 10px;   background-color : #4682B4;  color : #000000; }  
+TABLE.infoBox {   background-color: #4682B4; }  TABLE.infoBoxContents {   background-color: #FFFFFF;  }  
+TD.infoBoxHeading {   font-family: Verdana, Arial, sans-serif;   font-size: 10px; background-color: #4682B4; color: #FFFFFF; }  
+TD.infoBox, SPAN.infoBox {   font-family : Verdana, Arial, sans-serif;   font-size : 10px; }  
+TR.accountHistory-odd, TR.addressBook-odd, TR.alsoPurchased-odd, TR.payment-odd, TR.productListing-odd, TR.productReviews-odd, TR.upcomingProducts-odd, TR.shippingOptions-odd {   background-color : #ffffff; }  
+TR.accountHistory-even, TR.addressBook-even, TR.alsoPurchased-even, TR.payment-even, TR.productListing-even, TR.productReviews-even, TR.upcomingProducts-even, TR.shippingOptions-even {   background-color : #ffffff; }  
+TR.productListing-heading {   background-color : #d2e9fb; }  
+TD.productListing-heading {   font-family : Verdana, Arial, sans-serif;   font-size : 10px;   background-color : #4682B4;   color : #000000;   font-variant : small-caps; }  
+TD.productListing-data {   font-family : Verdana, Arial, sans-serif;   font-size : 10px; }  
+A.pageResults {    color: #0000FF;  }  
+A:hover.pageResults {    color: #0000FF;    background-color: #FFFF33;  }  
+TD.pageHeading, DIV.pageHeading {   font-family : Verdana, Arial, sans-serif;   font-size : 20px;   font-weight : bold;   color: #9a9a9a; }  
+TR.subBar {   background-color : #4682B4; }  
+TD.subBar {   font-family : Verdana, Arial, sans-serif;   font-size : 10px;   color : #FFFFFF; }  
+TD.main, P.main {   font-family : Verdana, Arial, sans-serif;   font-size : 11px;   line-height : 1.5; }  
+TD.smallText, SPAN.smallText {   font-family : Verdana, Arial, sans-serif;   font-size : 10px; }  
+TD.accountCategory {   font-family : Verdana, Arial, sans-serif;   font-size : 13px;   color : #aabbdd; }  
+TD.fieldKey {   font-family : Verdana, Arial, sans-serif;   font-size : 12px; }  
+TD.fieldValue {   font-family : Verdana, Arial, sans-serif;   font-size : 12px; }  
+TD.tableHeading {   font-family : Verdana, Arial, sans-serif;   font-size : 12px; }  
+SPAN.newItemInCart {   font-family : Verdana, Arial, sans-serif;   font-size : 10px;   color : #ff0000; }  
+CHECKBOX, INPUT, RADIO, SELECT {   font-family : Verdana, Arial, sans-serif;   font-size : 11px; }  
+TEXTAREA {   width: 100%;   font-family : Verdana, Arial, sans-serif;   font-size : 11px; }  
+SPAN.greetUser {   font-family : Verdana, Arial, sans-serif;   font-size : 12px;   color : #f0a480; }  
+TABLE.formArea {   background-color : #F1FFFF;   border-color : #4682B4;   border-style : solid;   border-width : 1px; }  
+TD.formAreaTitle {   font-family : Tahoma, Verdana, Arial, sans-serif;   font-size : 12px; }  
+SPAN.markProductOutOfStock {   font-family: Tahoma, Verdana, Arial, sans-serif;   font-size: 12px;   color: #c76170;   font-weight : bold; }  
+SPAN.productSpecialPrice {   font-family: Verdana, Arial, sans-serif;   color: #ff0000; }  
+TD.checkoutBar {   font-family : Verdana, Arial, sans-serif;   font-size : 10px;   color: #000000; }  
+SPAN.checkoutBarHighlighted {   font-family : Verdana, Arial, sans-serif;   font-size : 10px;   color: #000000; }
+

@@ -1,0 +1,305 @@
+/* reseta as margens*/
+
+*{
+	margin:0;
+	padding:0;
+	outline:none;
+	list-style:none;
+}
+
+a{
+	text-decoration:none;
+}
+
+body{
+	
+	font: 300 16px Arial;
+}
+
+/*tamanho do login*/
+
+.message{
+	background:#fff;
+	text-align:center;
+	width:100%;
+	color:#666;
+	padding:2px;
+	margin:0 auto;
+}
+
+#login{
+	width:300px;
+	margin: 0 auto;
+	position: relative;
+	top:120px;
+	border: 1px solid #f1f1f1;
+	padding:15px;
+	border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	}
+
+/*Posiciona tela do cadastro de clientes*/	
+#cadcli{
+	width:300px;
+	margin: 0 auto;
+	position: relative;
+	top:80px;
+	border: 1px solid #f1f1f1;
+	padding:15px;
+	border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	}
+
+/*Dimensao e posicionamento do formulario externo da tela de ordem de servico*/	
+#cados{
+	width:800px;
+	height: 580px;
+	margin: 0 auto;
+	position: relative;
+	top:80px;
+	border: 1px solid #ff1414;
+	padding:15px;
+	border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	}	
+	
+
+/*Posiciona logo tipo na tela*/	
+#externa{
+	padding-top:80px;
+	width: 600px;
+	height: 100px;
+	margin: 0 auto 0 auto;
+	/*background-color: #f1f1f1;*/
+}
+/*estiliza a pagina com as divs para fazer o orcamento*/
+#site{
+	/*padding-top:5px;*/
+	width: 1000px;
+	height: 600px;
+	margin: 0 auto 0 auto;
+	background-color: #e5e3e3;
+	padding: 10px;
+	border: 1px solid #000000;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+#topo{
+	background: #ff1717;
+	width:100%;
+	height: 50px;
+	FONT: arial;
+	TEXT-ALIGN: CENTER;
+	margin-top:10px;
+	color: #fdfdfd ;
+}
+#cabecalho{
+	background:#e5e3e3;
+	width:33%;
+	height: 40px;
+	margin-top:5px;
+	
+}
+
+/*alinha logo-imagem na tela de solicitacao de nova compra*/
+#interna{margin: 10px;	text-align: center;	margin-left: auto;    margin-right: auto;}
+/*alinha as divs da pagina de nova solicitacao de compra*/
+/*.classdivprod{width: 100%;	height: 40px;	display: inline-block;	font-size:20px;}*/
+
+/*alinha as divs (solicitante, departamento,centro de custo) da pagina de nova solicitacao de compra*/
+/*-----------------CONTEUDO 1---------------------------------------------------------------------------------------*/ 
+.classdiv{width: 330px;	height: 40px;	display: inline-block;	font-size:20px;}
+.classconteudo{background:#fdfbfb; width:800px; height: 30px;}
+.unid{background:#fdfbfb; width:100px; height: 30px;}
+.qtde{background:#fdfbfb; width:90px; height: 30px;}
+.aplicacao{background:#fdfbfb; width:100%; height: 50px; text-align: left;}
+
+#confbotao {
+	width:200px;	height: 50px;	margin: 50px 0px 0px 100px;  left: 40px; font-size: 30pt; font-family: Bold;
+}
+
+#menu1{background:#cacaca;	width:33%;	height: 30px;	margin-top:5px;	display: inline-block;}
+
+#conteudo1{background:#cacaca;	width:750px;	height: 30px;	margin:15px 0px 15px 0px; display: inline-block; float:left;}
+
+#sidebar1{background:#cacaca; height: 30px; margin:15px 0px 15px 0px; width:100px; float:left; margin-left:5px;}
+
+#sidebar2{background:#cacaca; height: 30px; margin:15px 0px 15px 0px; width:90px; float:left; margin-left:5px;}
+
+
+#aplicacao{background:#cacaca;	width:1000px;	height: 50px;	margin-top:15px; float:left; text-align:justify; }
+
+
+
+
+/*centralizar os forms da pagina painel*/
+.centro{
+	
+    width:400px; 
+	height:auto; 
+	margin: 30 auto;
+	
+}
+
+#loginnovo{
+	width:400px;
+	margin: 0 auto;
+	position: relative;
+	top:120px;
+}
+
+#cadastrar{
+	width:140px;
+	height:30px;
+	background:#f1f1f1;
+	padding:5px;
+	text-align:center;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	position:absolute;
+	right:0;
+	top:0;
+}
+#cadastrar:hover{
+	background:#fd261a;
+	color:#FFF;
+}
+
+#cadastrar:hover a{
+	color:#fdfcfc;
+	
+}
+
+#cadastrar a{
+	font:20px Arial;
+	color: #939191;
+}
+
+.logo{
+	width:250px;
+	height:92px;
+	margin:0 auto;
+	padding:7px;
+}
+
+/*acomoda cada label - acima do campo input*/
+#login label{
+	display:block;
+	padding-top:5px;
+}
+
+
+
+.acomodar{
+	margin:0 auto;
+	width:250px;
+}
+/*Posiciona tela no cadastro de ordem de servico*/
+.acomodaros{
+	margin:0 auto;
+	width:600px;
+	
+}
+
+.botao{
+	
+	margin:0 auto;
+	width:400px;
+	
+}
+
+.txt{
+	border:none;
+	height:40;
+	width:250px;
+	border: thin solid #c5c5c5;
+	margin-bottom:5px;
+}
+
+.txtcados{
+	border:none;
+	height:190;
+	width:600px;
+	border: thin solid #c5c5c5;
+	margin-bottom:20px;
+	margin-top:20px;
+	/*display:block;*/
+	
+	
+}
+
+
+
+.txt:focus{
+	border:thin solid #fd261a;
+	box-shadow: 0 2px 16px #fd261a;
+	-webkit-box-shadow: 0 2px 16px #fd261a;
+	-moz-box-shadow:0 2px 16px #fd261a;
+	
+}
+
+/*atributos do botão ENTRAR*/
+.sb{
+	display:block;
+	border:none;
+	width:250px;
+	height:40px;
+	margin-top:10px;
+	border: thin solid #d7d5d5;
+	font: 20px Arial;
+	cursor:pointer;
+}
+
+.bt{
+	display:block;
+	border:none;
+	width:400px;
+	height:60px;
+	margin-top:10px;
+	border: thin solid #d7d5d5;
+	font: 18px Arial;
+	cursor:pointer;
+	
+}
+.btpainel{
+	
+	display:block;
+	border:none;
+	width:400px;
+	height:60px;
+	margin-top:10px;
+	border: thin solid #d7d5d5;
+	font: 20px Arial;
+	cursor:pointer;
+	
+}
+
+.bt:hover{
+	background:#fd261a;
+	color:#FFF;
+}
+
+.btpainel:hover{
+	background:#fd261a;
+	color:#FFF;
+}
+
+.sb:hover{
+	background:#fd261a;
+	color:#FFF;
+}
+/*Classe de herança*/
+.bradius{
+	border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;	
+}
+/*Multiplos estilos*/
+.txt,.txt:focus,.bt,.bt:hover,.sb,.sb:hover,.btpainel:hover,#cadastrar:hover,#cadastrar{
+	transition:all 0.5s linear;
+	-webkit-transition:all 0.5s linear;
+	-moz-transition:all 0.5s linear;
+}
